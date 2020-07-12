@@ -12,7 +12,7 @@ tpl = """
 .equ SECOND_PAYLOAD, {second_payload}
 """
 
-prefix = "arm-vita-eabi-"
+prefix = "arm-dolce-eabi-"
 
 def build(tmp, code):
     src_file = os.path.join(tmp, "rop.S")

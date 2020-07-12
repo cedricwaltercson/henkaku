@@ -3,11 +3,15 @@
 Only Linux is supported. You will need:
 
 * Python 3
-* [Vita SDK](http://vitasdk.org/)
+* [Dolce SDK](https://sdk.cbps.xyz/)
 * Uglify JS (Ubuntu 16.04 package node-uglify) tested version 2.4.15
 * Other standard tools that you should already have installed, such as openssl, dd, cat, touch
 
 All tools should be in your PATH.
+
+On WSL 2 due to clock being weird, it's recommended to execute `sudo hwclock -s` before doing anything.
+
+Otherwise you'll get "Clock skew detected" warnings.
 
 Run `./build.sh` to build everything. This script first cleans up all build directories and then builds the exploit.
 

@@ -27,10 +27,10 @@ fi
 
 set -e
 
-CC=arm-vita-eabi-gcc
-LD=arm-vita-eabi-gcc
-AS=arm-vita-eabi-as
-OBJCOPY=arm-vita-eabi-objcopy
+CC=arm-dolce-eabi-gcc
+LD=arm-dolce-eabi-gcc
+AS=arm-dolce-eabi-as
+OBJCOPY=arm-dolce-eabi-objcopy
 LDFLAGS="-T payload/linker.x -nodefaultlibs -nostdlib -pie"
 DEFINES="-DRELEASE=$RELEASE"
 PREPROCESS="$CC -E -P -C -w -x c $DEFINES"
