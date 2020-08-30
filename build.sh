@@ -34,7 +34,7 @@ OBJCOPY=arm-dolce-eabi-objcopy
 LDFLAGS="-T payload/linker.x -nodefaultlibs -nostdlib -pie"
 DEFINES="-DRELEASE=$RELEASE"
 PREPROCESS="$CC -E -P -C -w -x c $DEFINES"
-CFLAGS="-fPIE -fno-zero-initialized-in-bss -std=c99 -mcpu=cortex-a9 -Os -mthumb $DEFINES"
+CFLAGS="-fPIE -fno-zero-initialized-in-bss -std=c99 -mcpu=cortex-a9 -Os -mthumb -w $DEFINES"
 
 # generate version stuffs
 BUILD_VERSION=$(git describe --dirty --always --tags)
@@ -69,7 +69,7 @@ echo "#define HENKAKU_USER_CRC32 0x$HENKAKU_USER_CRC32" >> build/version.c
 # user payload is injected into web browser process
 mkdir build/bootstrap
 pushd build/bootstrap
-cmake -DRELEASE=$RELEASE ../../bootstrap
+cmake --no-warn-unused-cli -DRELEASE=$RELEASE ../../bootstrap
 make
 popd
 xxd -i build/bootstrap/bootstrap.self > build/bootstrap.h

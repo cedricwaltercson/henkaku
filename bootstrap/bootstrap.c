@@ -9,12 +9,14 @@
 #include <psp2/kernel/sysmem.h>
 #include <psp2/display.h>
 #include <psp2/ctrl.h>
-#include <psp2/io/fcntl.h>
-#include <psp2/io/stat.h>
+#include <psp2kern/kernel/iofilemgr.h>
+//#include <psp2/io/fcntl.h>
+//#include <psp2/io/stat.h>
 #include <psp2/net/net.h>
 #include <psp2/net/netctl.h>
 #include <psp2/net/http.h>
-#include <psp2/shellutil.h>
+#include <psp2/shellsvc.h>
+//#include <psp2/shellutil.h>
 #include <psp2/promoterutil.h>
 #include <psp2/sysmodule.h>
 #include <psp2/appmgr.h>
