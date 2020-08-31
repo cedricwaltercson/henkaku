@@ -52,7 +52,7 @@ echo "0) taiHEN plugin"
 
 mkdir build/plugin
 pushd build/plugin
-cmake -DRELEASE=$RELEASE ../../plugin
+cmake -Wno-dev -DRELEASE=$RELEASE ../../plugin
 make
 popd
 cp build/plugin/henkaku.skprx output/henkaku.skprx
